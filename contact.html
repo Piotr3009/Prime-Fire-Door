@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S88RZLHQL2"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-S88RZLHQL2');
+  gtag('config','AW-3481705735');
+</script>
+    <!-- Google Analytics -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Prime Sash Windows - Book a measurement visit or send us a message.">
+    <title>Contact | Prime Sash Windows</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@200;300;400;500&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css?v=2">
+    
+    <style>
+        body { padding-top: 0; }
+
+        /* ── HERO ── */
+        .page-hero {
+            background: linear-gradient(135deg, #0B1220 0%, #0F1A2E 50%, #0B1628 100%);
+            position: relative; padding: 160px 5vw 80px; text-align: center;
+        }
+        .page-hero::before {
+            content:''; position:absolute; inset:0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            opacity:0.4; pointer-events:none;
+        }
+        .page-hero .eyebrow { color: rgba(212,212,200,.6); text-align: center; }
+        .page-hero h1 {
+            font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.5rem);
+            font-weight: 500; line-height: 1.12; color: #fff; margin-bottom: 1rem;
+        }
+        .page-hero .hero-subtitle {
+            font-size: 1.1rem; line-height: 1.8; color: rgba(255,255,255,.5);
+            max-width: 640px; margin: 0 auto;
+        }
+
+        /* ── MAIN CONTENT ── */
+        .contact-content {
+            max-width: 1400px; margin: 0 auto; padding: 4rem 3vw;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.2fr;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 1100px) {
+            .contact-grid { grid-template-columns: 1fr 1fr; }
+            .contact-grid > :first-child { grid-column: 1 / -1; }
+        }
+        @media (max-width: 700px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .contact-grid > :first-child { grid-column: auto; }
+        }
+
+        .contact-section {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .contact-section h3 {
+            font-family: var(--serif); font-size: 1.5rem;
+            font-weight: 500; color: var(--navy);
+            margin-bottom: 1.2rem; padding-bottom: .6rem;
+            border-bottom: 1px solid var(--cream3);
+        }
+
+        /* ── COMPACT CALENDAR ── */
+        .calendar-container {
+            background: var(--white);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid var(--cream3);
+        }
+
+        .calendar-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 14px; background: var(--navy); color: #fff;
+        }
+
+        .calendar-header h4 {
+            margin: 0; font-family: var(--sans); font-size: .9rem;
+            font-weight: 400; letter-spacing: .08em; color: #fff;
+        }
+
+        .calendar-nav {
+            background: none; border: 1px solid rgba(255,255,255,.4);
+            color: rgba(255,255,255,.8); width: 28px; height: 28px;
+            border-radius: 50%; cursor: pointer; font-size: 1rem;
+            transition: all 0.2s; display: flex; align-items: center; justify-content: center;
+        }
+        .calendar-nav:hover { background: rgba(255,255,255,.15); color: #fff; border-color: #fff; }
+
+        .calendar-weekdays {
+            display: grid; grid-template-columns: repeat(7, 1fr);
+            background: var(--cream2); padding: 6px 0;
+            text-align: center; font-weight: 400; font-size: .7rem;
+            color: var(--muted); letter-spacing: .05em;
+        }
+
+        .calendar-days {
+            display: grid; grid-template-columns: repeat(7, 1fr);
+            gap: 1px; padding: 6px; background: var(--white);
+        }
+
+        .calendar-day {
+            display: flex; flex-direction: column; align-items: center;
+            justify-content: center; padding: 6px 2px;
+            border-radius: 4px; font-size: .78rem; cursor: default;
+            min-height: 38px; transition: background .15s;
+        }
+
+        .calendar-day.other-month { color: var(--cream3); }
+        .calendar-day.today { background: #fff8e1; font-weight: 500; }
+        .calendar-day.has-slots { cursor: pointer; background: #eef6ee; }
+        .calendar-day.has-slots:hover { background: #d6ead6; }
+
+        .calendar-day .day-number { font-weight: 400; font-size: .78rem; }
+        .calendar-day .slots-indicator {
+            font-size: .55rem; color: var(--navy); opacity: .7; margin-top: 1px;
+        }
+
+        /* ── DAY DETAIL ── */
+        .day-detail {
+            display: none; margin-top: 12px; padding: 12px;
+            background: var(--white); border-radius: 6px;
+            border: 1px solid var(--navy);
+        }
+        .day-detail.active { display: block; }
+        .day-detail h4 {
+            margin: 0 0 10px 0; font-family: var(--serif);
+            font-size: 1.05rem; color: var(--navy);
+        }
+
+        .slot-btn {
+            display: block; width: 100%; padding: 10px 12px;
+            margin-bottom: 6px; border: 1px solid var(--cream3);
+            background: var(--white); border-radius: 4px; cursor: pointer;
+            text-align: left; font-family: var(--sans); font-size: .85rem;
+            color: var(--ink); transition: all 0.2s;
+        }
+        .slot-btn:hover { border-color: var(--navy); background: var(--cream); }
+        .slot-btn.selected { border-color: var(--navy); background: var(--cream2); font-weight: 400; }
+        .slot-btn.unavailable {
+            background: var(--cream2); color: var(--silver);
+            cursor: not-allowed; text-decoration: line-through;
+        }
+
+        /* ── SELECTED SLOTS ── */
+        .selected-slots {
+            margin-bottom: 16px; padding: 12px;
+            background: #eef6ee; border-radius: 6px;
+        }
+        .selected-slots h4 {
+            margin: 0 0 8px 0; font-family: var(--sans);
+            font-size: .85rem; font-weight: 500; color: var(--navy);
+        }
+        .selected-slot-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 6px 10px; background: var(--white);
+            border-radius: 4px; margin-bottom: 4px; font-size: .82rem;
+        }
+        .remove-slot {
+            background: var(--navy); color: #fff; border: none;
+            border-radius: 3px; padding: 3px 8px; cursor: pointer;
+            font-size: .7rem; font-family: var(--sans); transition: background .2s;
+        }
+        .remove-slot:hover { background: var(--navy-hover); }
+
+        .slots-help {
+            font-size: .78rem; color: var(--muted); margin-top: 12px;
+            padding: 10px 12px; background: var(--cream2);
+            border-radius: 4px; border-left: 3px solid var(--silver);
+            line-height: 1.6;
+        }
+        .slots-help strong { color: var(--ink); }
+
+        /* ── FORM ── */
+        .contact-form { display: flex; flex-direction: column; gap: .9rem; }
+
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label {
+            font-family: var(--sans); font-weight: 400; font-size: .78rem;
+            letter-spacing: .06em; text-transform: uppercase;
+            margin-bottom: 4px; color: var(--navy);
+        }
+        .form-group input,
+        .form-group textarea {
+            padding: 10px 12px; border: 1px solid var(--cream3);
+            border-radius: 4px; font-family: var(--sans); font-size: .9rem;
+            color: var(--ink); background: var(--cream); transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus { outline: none; border-color: var(--navy); background: var(--white); }
+        .form-group textarea { min-height: 80px; resize: vertical; }
+
+        .btn-submit {
+            background: var(--navy); color: rgba(255,255,255,.9);
+            border: none; padding: 12px 28px; border-radius: 4px;
+            font-family: var(--sans); font-size: .72rem; font-weight: 300;
+            letter-spacing: .3em; text-transform: uppercase;
+            cursor: pointer; transition: all 0.3s; margin-top: .4rem;
+        }
+        .btn-submit:hover { background: var(--navy-hover); }
+        .btn-submit:disabled { background: var(--silver); cursor: not-allowed; }
+
+        .success-message {
+            background: #eef6ee; color: var(--navy); padding: 1.5rem;
+            border-radius: 6px; text-align: center; display: none;
+            border: 1px solid #c8e6c9;
+        }
+        .success-message.show { display: block; }
+        .success-message h3 {
+            font-family: var(--serif); font-size: 1.4rem;
+            margin-bottom: .5rem; border: none; padding: 0;
+        }
+        .success-message p { font-size: .9rem; color: var(--muted); margin: 0; }
+
+        /* ── MESSAGE FORM ── */
+        .msg-form { display: flex; flex-direction: column; gap: .9rem; }
+        .msg-success { display: none; text-align: center; padding: 2rem 1rem; }
+        .msg-success.show { display: block; }
+        .msg-success h3 { font-family: var(--serif); font-size: 1.4rem; color: var(--navy); margin: 0 0 .5rem; }
+        .msg-success p { font-size: .9rem; color: var(--muted); margin: 0; }
+
+        /* ── CONTACT DETAILS BAR ── */
+        .contact-bar {
+            background: var(--navy); padding: 2.5rem 5vw; margin-top: 3rem;
+        }
+        .contact-bar-inner {
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        .contact-bar h3 {
+            grid-column: 1 / -1; font-family: var(--serif);
+            font-size: 1.5rem; font-weight: 500; color: #fff;
+            margin-bottom: .5rem; padding-bottom: .6rem;
+            border-bottom: 1px solid rgba(255,255,255,.15);
+        }
+        .contact-bar .cb-label {
+            font-size: .65rem; letter-spacing: .25em; text-transform: uppercase;
+            color: rgba(255,255,255,.4); margin-bottom: .4rem;
+        }
+        .contact-bar p { color: rgba(255,255,255,.75); font-size: .9rem; line-height: 1.6; margin: 0; }
+        .contact-bar a { color: rgba(255,255,255,.85); text-decoration: none; transition: color .2s; }
+        .contact-bar a:hover { color: #fff; }
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="canonical" href="https://www.primesashwindows.co.uk/contact.html"/>
+    <meta property="og:title" content="Contact & Book Survey | Prime Sash Windows London"/>
+    <meta property="og:description" content="Book a free measurement visit for timber sash windows in London. Select preferred time slots online."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.primesashwindows.co.uk/contact.html"/>
+    <meta property="og:locale" content="en_GB"/>
+</head>
+<body>
+    <!-- NAV -->
+    <div id="nav-placeholder"></div>
+    <script src="js/nav.js?v=2"></script>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <p class="eyebrow">Book a Visit</p>
+        <h1>Get in Touch</h1>
+        <p class="hero-subtitle">Book a measurement visit, send us a message, or call us directly. We're here to help with your timber window project.</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="contact-content">
+        <div class="contact-grid">
+
+            <!-- Calendar Section -->
+            <div class="contact-section">
+                <h3>Select Your Preferred Slots</h3>
+
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="calendar-nav" onclick="BookingCalendar.prevMonth()">‹</button>
+                        <h4 id="calendar-month-year"></h4>
+                        <button class="calendar-nav" onclick="BookingCalendar.nextMonth()">›</button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+                    </div>
+                    <div class="calendar-days" id="calendar-days"></div>
+                </div>
+
+                <div class="day-detail" id="day-detail">
+                    <h4 id="day-detail-title">Select a slot:</h4>
+                    <div id="day-slots"></div>
+                </div>
+
+                <div class="slots-help">
+                    <strong>How it works:</strong> Click on a green day to see available slots. Select up to 3 preferred times. We'll contact you to confirm one.
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="contact-section">
+                <h3>Booking Details</h3>
+
+                <div id="selected-slots-container" class="selected-slots" style="display: none;">
+                    <h4>Selected Slots:</h4>
+                    <div id="selected-slots-list"></div>
+                </div>
+
+                <div id="success-message" class="success-message">
+                    <h3>Thank you!</h3>
+                    <p>Your booking request has been submitted. We'll contact you shortly to confirm your appointment.</p>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="customer-name">Full Name *</label>
+                        <input type="text" id="customer-name" required placeholder="John Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-email">Email *</label>
+                        <input type="email" id="customer-email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Phone (optional)</label>
+                        <input type="tel" id="customer-phone" placeholder="07123 456789">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-address">Property Address *</label>
+                        <input type="text" id="customer-address" required placeholder="123 Example Street, London">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-message">Additional Notes</label>
+                        <textarea id="customer-message" placeholder="Number of windows, property type, access info..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" id="submit-btn">Submit Booking Request</button>
+                </form>
+            </div>
+
+            <!-- Message Form Section -->
+            <div class="contact-section">
+                <h3>Send us a Message</h3>
+
+                <div id="msg-success" class="msg-success">
+                    <h3>Message Sent</h3>
+                    <p>Thank you — we'll get back to you shortly.</p>
+                </div>
+
+                <form id="message-form" class="msg-form">
+                    <div class="form-group">
+                        <label for="msg-name">Your Name *</label>
+                        <input type="text" id="msg-name" required placeholder="John Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="msg-email">Email *</label>
+                        <input type="email" id="msg-email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="msg-phone">Phone</label>
+                        <input type="tel" id="msg-phone" placeholder="07123 456789">
+                    </div>
+                    <div class="form-group">
+                        <label for="msg-text">Message *</label>
+                        <textarea id="msg-text" required placeholder="Tell us about your project, ask a question, or request a callback..." style="min-height:120px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" id="msg-submit-btn">Send Message</button>
+                </form>
+
+                <div style="margin-top:1.2rem;padding-top:.8rem;border-top:1px solid var(--cream3);text-align:center;">
+                    <p style="font-size:.8rem;color:var(--muted);margin:0;">Or email us directly: <a href="mailto:info@primesashwindows.co.uk" style="color:var(--navy);font-weight:500;">info@primesashwindows.co.uk</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CONTACT DETAILS BAR -->
+    <div class="contact-bar">
+        <div class="contact-bar-inner">
+            <h3>Contact Us Directly</h3>
+            <div>
+                <p class="cb-label">Phone</p>
+                <p><a href="tel:07842510060">07842 510 060</a></p>
+                <p><a href="tel:07842510066">07842 510 066</a></p>
+            </div>
+            <div>
+                <p class="cb-label">Email</p>
+                <p><a href="mailto:info@primesashwindows.co.uk">info@primesashwindows.co.uk</a></p>
+            </div>
+            <div>
+                <p class="cb-label">Address</p>
+                <p>Unit 3, Leaside Industrial Park,<br>Sedge Green, Nazeing, EN9 2BF</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/footer.js?v=2"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js?v=2"></script>
+    <script src="js/menu-loader.js?v=2"></script>
+    <script src="js/auth.js?v=2"></script>
+    <script>
+        const authSystem = new AuthSystem();
+        
+        const SLOTS = [
+            { time: '09:00 - 11:00', start: '09:00' },
+            { time: '11:00 - 13:00', start: '11:00' },
+            { time: '13:00 - 15:00', start: '13:00' },
+            { time: '15:00 - 17:00', start: '15:00' }
+        ];
+        
+        const BookingCalendar = {
+            currentDate: new Date(),
+            selectedSlots: [],
+            availableSlots: {},
+            maxSlots: 3,
+            SLOT_TIMES: ['09:00 - 11:00', '11:00 - 13:00', '13:00 - 15:00', '15:00 - 17:00'],
+            
+            async init() {
+                await this.cleanupOldSlots();
+                await this.autoGenerateSlots();
+                await this.loadAvailableSlots();
+                this.render();
+            },
+            
+            async cleanupOldSlots() {
+                try {
+                    const cutoffDate = new Date();
+                    cutoffDate.setDate(cutoffDate.getDate() - 7);
+                    const { error } = await window.supabaseClient
+                        .from('appointment_slots')
+                        .delete()
+                        .lt('slot_date', cutoffDate.toISOString().split('T')[0])
+                        .eq('is_available', true);
+                    if (error) console.warn('Cleanup skipped:', error.message);
+                } catch (error) {
+                    console.warn('Cleanup error:', error.message);
+                }
+            },
+            
+            async autoGenerateSlots() {
+                try {
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+                    const endDate = new Date(today);
+                    endDate.setDate(endDate.getDate() + 28);
+                    
+                    const { data: existingSlots, error: fetchError } = await window.supabaseClient
+                        .from('appointment_slots')
+                        .select('slot_date, slot_time')
+                        .gte('slot_date', today.toISOString().split('T')[0]);
+                    if (fetchError) throw fetchError;
+                    
+                    const existingKeys = new Set(
+                        (existingSlots || []).map(s => `${s.slot_date}_${s.slot_time}`)
+                    );
+                    
+                    const slotsToInsert = [];
+                    const currentDate = new Date(today);
+                    currentDate.setDate(currentDate.getDate() + 1);
+                    
+                    while (currentDate <= endDate) {
+                        const dayOfWeek = currentDate.getDay();
+                        if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+                            const dateStr = currentDate.toISOString().split('T')[0];
+                            this.SLOT_TIMES.forEach(time => {
+                                const key = `${dateStr}_${time}`;
+                                if (!existingKeys.has(key)) {
+                                    slotsToInsert.push({ slot_date: dateStr, slot_time: time, is_available: true });
+                                }
+                            });
+                        }
+                        currentDate.setDate(currentDate.getDate() + 1);
+                    }
+                    
+                    if (slotsToInsert.length > 0) {
+                        const { error: insertError } = await window.supabaseClient
+                            .from('appointment_slots').insert(slotsToInsert);
+                        if (insertError) console.warn('Could not auto-generate slots:', insertError.message);
+                        else console.log(`Auto-generated ${slotsToInsert.length} slots for next 4 weeks`);
+                    }
+                } catch (error) {
+                    console.warn('Auto-generate slots skipped:', error.message);
+                }
+            },
+            
+            async loadAvailableSlots() {
+                try {
+                    const today = new Date().toISOString().split('T')[0];
+                    const { data, error } = await window.supabaseClient
+                        .from('appointment_slots')
+                        .select('*')
+                        .eq('is_available', true)
+                        .gte('slot_date', today);
+                    if (error) throw error;
+                    
+                    this.availableSlots = {};
+                    (data || []).forEach(slot => {
+                        if (!this.availableSlots[slot.slot_date]) this.availableSlots[slot.slot_date] = [];
+                        this.availableSlots[slot.slot_date].push(slot);
+                    });
+                } catch (error) {
+                    console.error('Error loading slots:', error);
+                }
+            },
+            
+            render() {
+                const year = this.currentDate.getFullYear();
+                const month = this.currentDate.getMonth();
+                
+                document.getElementById('calendar-month-year').textContent = 
+                    new Date(year, month).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+                
+                const firstDay = new Date(year, month, 1);
+                const lastDay = new Date(year, month + 1, 0);
+                const startDay = (firstDay.getDay() + 6) % 7;
+                
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                
+                let html = '';
+                
+                const prevMonth = new Date(year, month, 0);
+                for (let i = startDay - 1; i >= 0; i--) {
+                    const day = prevMonth.getDate() - i;
+                    html += `<div class="calendar-day other-month"><span class="day-number">${day}</span></div>`;
+                }
+                
+                for (let day = 1; day <= lastDay.getDate(); day++) {
+                    const date = new Date(year, month, day);
+                    const dateStr = date.toISOString().split('T')[0];
+                    const isToday = date.getTime() === today.getTime();
+                    const isPast = date < today;
+                    const slots = this.availableSlots[dateStr] || [];
+                    const hasSlots = slots.length > 0 && !isPast;
+                    
+                    let classes = 'calendar-day';
+                    if (isToday) classes += ' today';
+                    if (hasSlots) classes += ' has-slots';
+                    
+                    let slotsIndicator = '';
+                    if (hasSlots) {
+                        slotsIndicator = `<span class="slots-indicator">${slots.length} slot${slots.length > 1 ? 's' : ''}</span>`;
+                    }
+                    
+                    const onclick = hasSlots ? `onclick="BookingCalendar.showDaySlots('${dateStr}')"` : '';
+                    
+                    html += `<div class="${classes}" ${onclick}>
+                        <span class="day-number">${day}</span>
+                        ${slotsIndicator}
+                    </div>`;
+                }
+                
+                const totalCells = startDay + lastDay.getDate();
+                const remaining = (7 - (totalCells % 7)) % 7;
+                for (let day = 1; day <= remaining; day++) {
+                    html += `<div class="calendar-day other-month"><span class="day-number">${day}</span></div>`;
+                }
+                
+                document.getElementById('calendar-days').innerHTML = html;
+            },
+            
+            prevMonth() {
+                this.currentDate.setMonth(this.currentDate.getMonth() - 1);
+                this.render();
+                document.getElementById('day-detail').classList.remove('active');
+            },
+            
+            nextMonth() {
+                this.currentDate.setMonth(this.currentDate.getMonth() + 1);
+                this.render();
+                document.getElementById('day-detail').classList.remove('active');
+            },
+            
+            showDaySlots(dateStr) {
+                const slots = this.availableSlots[dateStr] || [];
+                const date = new Date(dateStr);
+                const dateFormatted = date.toLocaleDateString('en-GB', { 
+                    weekday: 'long', day: 'numeric', month: 'long' 
+                });
+                
+                document.getElementById('day-detail-title').textContent = dateFormatted;
+                
+                const slotsHtml = slots.map(slot => {
+                    const isSelected = this.selectedSlots.some(s => s.id === slot.id);
+                    const selectedClass = isSelected ? 'selected' : '';
+                    return `<button class="slot-btn ${selectedClass}" onclick="BookingCalendar.toggleSlot('${slot.id}', '${dateStr}', '${slot.slot_time}')">
+                            🕐 ${slot.slot_time}
+                        </button>`;
+                }).join('');
+                
+                document.getElementById('day-slots').innerHTML = slotsHtml || '<p>No available slots</p>';
+                document.getElementById('day-detail').classList.add('active');
+            },
+            
+            toggleSlot(slotId, date, time) {
+                const existingIndex = this.selectedSlots.findIndex(s => s.id === slotId);
+                if (existingIndex >= 0) {
+                    this.selectedSlots.splice(existingIndex, 1);
+                } else {
+                    if (this.selectedSlots.length >= this.maxSlots) {
+                        alert(`Maximum ${this.maxSlots} slots allowed. Remove one first.`);
+                        return;
+                    }
+                    this.selectedSlots.push({ id: slotId, date, time });
+                }
+                this.showDaySlots(date);
+                this.updateSelectedSlotsDisplay();
+            },
+            
+            removeSlot(slotId) {
+                const slot = this.selectedSlots.find(s => s.id === slotId);
+                this.selectedSlots = this.selectedSlots.filter(s => s.id !== slotId);
+                this.updateSelectedSlotsDisplay();
+                if (slot) this.showDaySlots(slot.date);
+            },
+            
+            updateSelectedSlotsDisplay() {
+                const container = document.getElementById('selected-slots-container');
+                const list = document.getElementById('selected-slots-list');
+                
+                if (this.selectedSlots.length === 0) {
+                    container.style.display = 'none';
+                    return;
+                }
+                
+                container.style.display = 'block';
+                list.innerHTML = this.selectedSlots.map(slot => {
+                    const date = new Date(slot.date);
+                    const dateStr = date.toLocaleDateString('en-GB', { 
+                        weekday: 'short', day: 'numeric', month: 'short' 
+                    });
+                    return `<div class="selected-slot-item">
+                            <span>${dateStr} - ${slot.time}</span>
+                            <button class="remove-slot" onclick="BookingCalendar.removeSlot('${slot.id}')">✕ Remove</button>
+                        </div>`;
+                }).join('');
+            }
+        };
+        
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (BookingCalendar.selectedSlots.length === 0) {
+                alert('Please select at least one preferred time slot from the calendar.');
+                return;
+            }
+            
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            const formData = {
+                customer_name: document.getElementById('customer-name').value.trim(),
+                email: document.getElementById('customer-email').value.trim(),
+                phone: document.getElementById('customer-phone').value.trim() || null,
+                preferred_slots: BookingCalendar.selectedSlots.map(s => ({ id: s.id, date: s.date, time: s.time })),
+                message: document.getElementById('customer-address').value.trim() + 
+                         (document.getElementById('customer-message').value.trim() ? 
+                          '\n\nNotes: ' + document.getElementById('customer-message').value.trim() : ''),
+                status: 'pending'
+            };
+            
+            try {
+                const { error } = await window.supabaseClient
+                    .from('appointment_requests')
+                    .insert([formData]);
+                if (error) throw error;
+                
+                document.getElementById('contact-form').style.display = 'none';
+                document.getElementById('selected-slots-container').style.display = 'none';
+                document.getElementById('success-message').classList.add('show');
+                
+                // Send email notification
+                try {
+                    await fetch('/api/send-email', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ type: 'appointment', data: formData })
+                    });
+                } catch (emailErr) { console.warn('Email notification failed:', emailErr); }
+                
+                // Google Ads conversion tracking
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-3481705735/contact_form',
+                    });
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error submitting request. Please try again.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Booking Request';
+            }
+        });
+        
+        // ── Message Form submission ──
+        document.getElementById('message-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const btn = document.getElementById('msg-submit-btn');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            
+            const msgData = {
+                name: document.getElementById('msg-name').value.trim(),
+                email: document.getElementById('msg-email').value.trim(),
+                phone: document.getElementById('msg-phone').value.trim() || null,
+                message: document.getElementById('msg-text').value.trim()
+            };
+            
+            try {
+                const resp = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ type: 'contact', data: msgData })
+                });
+                
+                if (!resp.ok) throw new Error('Send failed');
+                
+                document.getElementById('message-form').style.display = 'none';
+                document.getElementById('msg-success').classList.add('show');
+                
+                // Google Ads conversion tracking
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-3481705735/contact_message',
+                    });
+                }
+            } catch (error) {
+                console.error('Message send error:', error);
+                alert('Error sending message. Please try again or email us directly at info@primesashwindows.co.uk');
+                btn.disabled = false;
+                btn.textContent = 'Send Message';
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => BookingCalendar.init());
+    </script>
+</body>
+</html>
