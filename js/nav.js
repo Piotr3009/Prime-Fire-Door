@@ -88,8 +88,9 @@
 
   function initAuth() {
     if (!window.supabaseClient && window.supabase) {
-      var url = 'https://rfelsfwjszjdtzuovlal.supabase.co';
-      var key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJmZWxzZndqc3pqZHR6dW92bGFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0Nzc1MTgsImV4cCI6MjA5MDA1MzUxOH0.Ut9EtffoU-L1g6IKiqcaVaoA2sEDoc0so821L1Uxn_A';
+      // TODO: Wklej nowe klucze Supabase poniżej
+      var url = '';
+      var key = '';
       window.supabaseClient = window.supabase.createClient(url, key);
     }
     if (!window.supabaseClient) return;
